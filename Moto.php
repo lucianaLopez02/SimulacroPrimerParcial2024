@@ -71,7 +71,8 @@ class Moto{
 		if ($activa){
 			$anio = 2024;
 			$aniosTranscurridos = $anio - $this->getAnioFabricacion();
-			$disponible = $this->getCosto() +  $this-> getCosto() * ($aniosTranscurridos * $this->getPorcentajeIncrementoAnual());
+			$porcAnual = $this->getPorcentajeIncrementoAnual() / 100;
+			$disponible = $this->getCosto() +  $this-> getCosto() * ($aniosTranscurridos * $porcAnual);
 			
 		}else{
 			$disponible = -1;
